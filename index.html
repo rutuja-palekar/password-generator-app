@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="heading">Password Generator</h1>
+    </header>
+
+    <section class="showPasswordContainer">
+        <span class="showPassword" id="viewPassword"></span>
+        <span class="copyIcon" id="copyIcon" onclick="copyToClipboard()">
+            <i class="fas fa-copy copyIcon"></i>
+        </span>
+    </section>
+
+    <section class="container">
+
+        <div class="pswd-generator">
+
+            <label for="charLength">Character Length</label>
+
+            <div class="RangeSlideContainer" id="rangeValue">
+                <input type="range" min="1" max="16" value="1" class="rangeSlider" id="rangeSlider">
+                <output class="showRangeValue" id="showRangeValue">1</output>
+            </div>
+
+            <div class="optionsContainer">
+
+                <label class="options">Include Uppercase Letters
+                    <input type="checkbox" checked />
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="options">Include Lowercase Letters
+                    <input type="checkbox" checked />
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="options">Include Numbers
+                    <input type="checkbox" checked />
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="options">Include Symbols
+                    <input type="checkbox" checked />
+                    <span class="checkmark"></span>
+                </label>
+
+            </div>
+
+            <aside>
+                <div class="strengthContainer">
+                    <span class="strengthText">STRENGTH:
+                        <span class="strengthRating">
+                            <span id="strengthVeryWeak" class="veryWeakStrength"></span>
+                            <span id="strengthWeak" class="weakStrength"></span>
+                            <span id="strengthMedium" class="mediumStrength"></span>
+                            <span id="strengthStrong" class="strongStrength"></span>
+                            <span id="strengthVeryStrong" class="veryStrongStrength"></span>
+                        </span>
+                    </span>
+                </div>
+            </aside>
+
+            <div class="buttonIcon">
+                <div class="button">
+                    <i class="fas fa-arrow-right-long generateArrow"></i>
+                    <input type="button" value="Generate" onclick="showPassword()">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/b522be7469.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
