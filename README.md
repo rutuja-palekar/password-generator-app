@@ -7,8 +7,8 @@ This is a Password Generator web app that allows users to create secure password
   
   
 Tech Stack:  
-HTML  
-CSS  
+HTML5  
+CSS3  
 JavaScript  
 Normalize.css - For consistent styling across browsers   
 Font Awesome - For icons  
